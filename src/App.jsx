@@ -42,7 +42,10 @@ export default function App() {
         <LogoutButton onLogout={handleLogout}/>
         <MainPage />
         </>) : (
-        <LoginForm onLoginSuccess={handleLoginSuccess}/>
+          <>
+          <LoginForm onLoginSuccess={handleLoginSuccess}/>
+          <SignupForm onLoginSuccess={handleLoginSuccess} />
+          </>
         )
       }
     </main>

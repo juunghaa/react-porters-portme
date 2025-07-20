@@ -1,28 +1,114 @@
 .login-form {
+  background-color: #313845;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: auto;
+  font-family: 'Pretendard', sans-serif;
   display: flex;
   flex-direction: column;
-  width: 280px;
-  margin: 40px auto;
-}
-
-.login-form input {
-  margin-bottom: 12px;
-  padding: 10px;
-  font-size: 14px;
-}
-
-.login-form button {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
+  align-items: center; /* input 중앙 정렬 */
+  width: 100%; /* 너비 100%로 설정 */
+  min-width: 400px;
+} 
+.login-title {
+  font-size: 1.4rem;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+.login-subtitle {
+  text-align: center;
+  color: #CFD5DD;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+.input-group {
+  width: 30%; /* ← 너비 비율 조정 (기존 100% → 30%) */
+  min-width: 400px; /* 최소 너비 설정 */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.input-group label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+.input-group input {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #CFD5DD;
+  background-color: #313845;
+  font-size: 1rem;
+  color: white;
+  box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 계산 */
+}
+
+.error-text {
+  color: #ff7070;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  
+  width: 30%; /*로그인폼의 퍼센트 비율만큼 로그인 옵션이 차지함*/
+  min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login-options a {
+  font-size: 0.8rem;
+  color: #aaa;
+  text-decoration: underline;
+  justify-content: flex-start;
+}
+.submit-button {
+  background-color: #607087;
+  color: white;
   border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 4px;
+  font-weight: bold;
 }
-.login-form button:hover {
-  background-color: #0056b3;
+.divider {
+  text-align: center;
+  margin: 1.5rem 0;
+  color: #aaa;
+  position: relative;
+  min-width: 400px;
 }
+.divider::before,
+.divider::after {
+  content: "";
+  display: inline-block;
+  width: 40%; /*양쪽 선을 해당 퍼센트 비율로 주면 -> 총 80퍼 + 가운데 글자*/
+  height: 1px;
+  background-color: #ccc;
+  vertical-align: middle;
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .login-options {
+    flex-direction: column;
+    align-items: stretch;
+    width: 80%;
+    gap: 0.5rem;
+  }
+
+  .login-options a,
+  .login-options .submit-button {
+    text-align: center;
+  }
+}
+
 
 .logout-button {
   background-color: #dc3545;
@@ -63,17 +149,41 @@
   color: red;
   font-size: 14px;
   margin-bottom: 10px;
-}
+} */
 
-.google-login-button {
-  padding: 10px;
-  margin-top: 8px;
-  background-color: #8897d3;
-  border: 1px solid #ccc;
-  font-weight: bold;
+/* 구글 로그인 버튼 로고는 아래 주소
+https://developers.google.com/identity/branding-guidelines#download-brand-icons
+참고함 */
+
+.google-login-button, .google-login-button * {
   cursor: pointer;
 }
+.google-login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* 아이콘과 텍스트 간격 */
+  
+  width: 100%;
+  max-width: 350px;
+  height: 45px;
+  padding: 16px 24px;
+  
+  background-color: white;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
 
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+.google-login-button:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
 
 
 /* App.css */
