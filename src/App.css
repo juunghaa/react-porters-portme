@@ -45,11 +45,30 @@
 }
 
 .error-text {
-  color: #ff7070;
+  color: #e05757;
   font-size: 0.9rem;
-  margin-top: -0.5rem;
-  margin-bottom: 1rem;
+  margin-top: 0.40rem;
+  margin-bottom: 0.5rem;
 }
+.input-error {
+  border: 1px solid #e05757 !important; /* 에러 시 테두리 색상 변경 */
+  background-color: #313845;
+  color: white;
+}
+.login-alert {
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 280px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
 
 .login-options {
   display: flex;
@@ -65,7 +84,7 @@
 .login-options a {
   font-size: 0.8rem;
   color: #aaa;
-  text-decoration: underline;
+  text-decoration: none;
   justify-content: flex-start;
 }
 .submit-button {
@@ -83,6 +102,7 @@
   color: #aaa;
   position: relative;
   min-width: 400px;
+  font-size: 0.8rem;
 }
 .divider::before,
 .divider::after {
@@ -145,11 +165,7 @@
 .signup-form button:hover {
   background-color: #218838;
 }
-.error-text {
-  color: red;
-  font-size: 14px;
-  margin-bottom: 10px;
-} */
+
 
 /* 구글 로그인 버튼 로고는 아래 주소
 https://developers.google.com/identity/branding-guidelines#download-brand-icons
