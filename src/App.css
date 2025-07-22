@@ -96,6 +96,18 @@
   cursor: pointer;
   font-weight: bold;
 }
+.submit-button-big {
+  background-color: #607087;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  min-width: 350px;
+  height: 45px;
+  margin-top: 0.8rem;
+}
 .divider {
   text-align: center;
   margin: 1.5rem 0;
@@ -142,6 +154,27 @@
   background-color: #b02a37;
 }
 
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem; /* 원하는 크기로 조절 */
+  line-height: 1.4;
+}
+.checkbox-label input {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+.checkbox-text {
+  display: inline-block;
+  font-size: 0.85rem; /* 원하는 크기로 조절 */
+}
+.input-group.checkbox-tight {
+  margin-top: 0.2rem; /* 기본보다 간격 축소 */
+  margin-bottom: 0.1rem; /* 기본보다 간격 축소 */
+}
+
+/* 
 .signup-form {
   display: flex;
   flex-direction: column;
@@ -164,7 +197,7 @@
 }
 .signup-form button:hover {
   background-color: #218838;
-}
+} */
 
 
 /* 구글 로그인 버튼 로고는 아래 주소
