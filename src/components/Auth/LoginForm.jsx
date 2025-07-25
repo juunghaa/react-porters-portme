@@ -1,3 +1,8 @@
+// pages/LoginPage.jsx를 만들어서 로그인 페이지(디자인)를 관리해야 하는데
+//제가 재사용 UI 로그인 폼 자체(component)에 페이지 디자인을 넣어버려서..
+//나중에 component와 page를 나눠야할 듯 합니다..
+//우선 급한건 아닌 것 같아서 냅뒀어요!!
+
 // 로그인 UI
 import React, {useState} from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -14,7 +19,7 @@ export default function LoginForm({onLoginSuccess}) {
 
     const handleSubmit = (e)=>{
         e.preventDefault(); //새로고침 방지하고 현재 이메일비번 콘솔출력
-        // setLoginError("이메일 또는 비밀번호가 올바르지 않아요"); //로그인 실패 테스트용 코드
+        setLoginError("이메일 또는 비밀번호가 올바르지 않아요"); //로그인 실패 테스트용 코드
 
         console.log('로그인 시도: ', {email, password});
 
