@@ -1,8 +1,3 @@
-// pages/LoginPage.jsx를 만들어서 로그인 페이지(디자인)를 관리해야 하는데
-//제가 재사용 UI 로그인 폼 자체(component)에 페이지 디자인을 넣어버려서..
-//나중에 component와 page를 나눠야할 듯 합니다..
-//우선 급한건 아닌 것 같아서 냅뒀어요!!
-
 // 로그인 UI
 import React, {useState} from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -16,6 +11,7 @@ export default function LoginForm({onLoginSuccess}) {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [loginError, setLoginError] = useState('');
+    const [submit, onSubmit] = useState('');
 
     const handleSubmit = (e)=>{
         e.preventDefault(); //새로고침 방지하고 현재 이메일비번 콘솔출력
@@ -44,27 +40,9 @@ export default function LoginForm({onLoginSuccess}) {
 
         if (!valid) return;
 
-        // 백엔드 연동 코드 추가
-        signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            console.log('로그인 성공:', userCredential.user);
-            // 로그인 성공 시 상태 업데이트나 페이지 이동 추가 가능
-            onLoginSuccess(); //<<--상태업데이트페이지전환
-        })
-        .catch((error) => {
-            // setError('로그인 실패: ' + error.message);
-            console.log(error.code); // 코드 예: "auth/user-not-found", "auth/wrong-password"
-            if (
-                error.code === "auth/user-not-found" ||
-                error.code === "auth/wrong-password"
-              ) {
-                setLoginError("이메일 또는 비밀번호가 올바르지 않아요");
-              } else {
-                setLoginError("로그인 중 오류가 발생했습니다");
-              }
-        });   
+        onSubmit(email, password);
     };
-
+        
     return(
         <form onSubmit={handleSubmit} className="login-form">
             {loginError && (

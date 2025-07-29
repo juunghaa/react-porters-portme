@@ -16,7 +16,8 @@ export default function SignupForm() {
     const [agree, setAgree] = useState(false); // 약관 동의 필드 추가
     const [agreeError, setAgreeError] = useState('');
     const [agreeMarketing, setAgreeMarketing] = useState(false);
-
+    const [submit, onSubmit] = useState('');
+    
     //async는 순차적 실행한다는 뜻이라고 봐도 됨
     const handleSubmit= async (e)=>{
         e.preventDefault();
@@ -27,6 +28,8 @@ export default function SignupForm() {
         setEmailError('');
         setPasswordError('');
         setConfirmError('');
+        setNameError('');
+        setAgreeError('');
         
         let valid = true;
 
@@ -53,16 +56,10 @@ export default function SignupForm() {
           
         if (!valid) return;
 
-        try {
-            await createUserWithEmailAndPassword(auth, email, password);
-            alert("회원가입이 완료되었습니다!");
-            // 회원가입 이후 처리 (ex: 로그인 상태 전환 등)
-          } catch (err) {
-            setSignupError('회원가입에 실패했습니다. 다시 시도해주세요.');
-            console.error(err);
-          }
-        };
+        onSubmit({ email, password, name });
+    };
 
+        
     return(
         <form onSubmit={handleSubmit} className="login-form">
             {/* {error && <div className="signup-alert">{error}</div>} */}

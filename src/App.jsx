@@ -9,6 +9,8 @@ import RecentSlides from './components/Main/RecentSlides';
 import './App.css';
 import ActivityEditor from './components/Editor/ActivityEditor';
 import ActivityEditorPage from './pages/ActivityEditorPage';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
 
 
 // 나중에 로그인 이후 로그인폼 감추고 메인만 보이도록 정리하거나.. 페이지 관리 필요 
@@ -47,8 +49,8 @@ export default function App() {
         <MainPage />
         </>) : (
           <>
-          <LoginForm onLoginSuccess={handleLoginSuccess}/>
-          <SignupForm onLoginSuccess={handleLoginSuccess} />
+          <LoginPage onLoginSuccess={handleLoginSuccess}/>
+          <SignupPage onLoginSuccess={handleLoginSuccess} />
           </>
         )
       }
