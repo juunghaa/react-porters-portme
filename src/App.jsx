@@ -8,7 +8,7 @@ import ProgressTracker from './components/Main/ProgressTracker';
 import RecentSlides from './components/Main/RecentSlides';
 import './App.css';
 import ActivityEditor from './components/Editor/ActivityEditor';
-import ActivityEditorPage from './pages/ActivityEditorPage';
+import ActivityEditorPage from './pages/ActivityEditorPage.jsx';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 
