@@ -1,0 +1,44 @@
+.onboarding-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c2431; /* 어두운 배경 톤 */
+  }
+  
+  .onboarding-box {
+    text-align: center;
+    padding: 3rem;
+    background-color: #2a2f3a;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+  
+  .onboarding-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+  
+  .onboarding-description {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .onboarding-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: #6c80ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .onboarding-button:hover {
+    background-color: #5a6edb;
+  }
+  
