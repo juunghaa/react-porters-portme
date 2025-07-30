@@ -4,20 +4,23 @@ import React, {useState, useEffect} from 'react';
 import './ActivityModal.css'; // 스타일 따로 분리해도 OK
 
 export default function ActivityModal({ activity={}, onClose, onSubmit }) {
-  const [title, setTitle] = useState('');
+  const [title, setTitle] = useState(activity.title || ''); // 초기값 설정
   const [details, setDetails] = useState('');
   const [tag, setTag] = useState(''); // 태그 상태 추가
-  const [isEditing, setIsEditing] = useState(!activity); // 새 활동일 경우 true
+//   const [isEditing, setIsEditing] = useState(!activity); // 새 활동일 경우 true
+  const [isEditing, setIsEditing] = useState(false); // 새 활동일 경우 true
   
   //useEffect는 컴포넌트가 처음 렌더링될 때나 activity가 변경될 때마다 실행됨 
   //특정 값이 바뀔 떄만 실행 되도록 작성하였음 
   useEffect(() => {
-      if(activity) {
-          setTitle(activity.title || '');
-          setDetails(activity.details || '');
-          setTag(activity.tag || '');
-          setIsEditing(false); // 기존 활동을 편집하는 경우
-        } 
+      if(!activity || !activity.title) {
+        setIsEditing(true); // 기존 활동을 편집하는 경우
+      } else {
+        setTitle(activity.title || '');
+        setDetails(activity.details || '');
+        setTag(activity.tag || '');
+        setIsEditing(false); // 새 활동을 추가하는 경우
+     }
     }, [activity]); // activity가 변경될 때마다 상태 업데이트
 
     const handleSubmit = () => {

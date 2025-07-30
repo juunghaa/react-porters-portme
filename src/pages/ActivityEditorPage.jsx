@@ -51,7 +51,7 @@ export default function ActivityEditorPage() {
 
         {(isModalOpen || selectedActivity) && (
         <ActivityEditor
-            activity={selectedActivity}
+            activity={selectedActivity || {}}
             onClose={handleCloseDetail}
             onSubmit={handleAddActivity} // 수정 시에도 사용
             />
