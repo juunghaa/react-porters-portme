@@ -11,7 +11,7 @@ export default function ActivityList({ activities =[], details=[], onDelete, onV
     <ul className="activity-list">
       {activities.map((activity, index) => (
         <li key={index}>
-        <span onClick={() => onView(activity)}>{activity.title}</span>
+        <span onClick={() => onView(activity, index)}>{activity.title} {activity.tag && `(${activity.tag})`}</span>
         <button onClick={() => onDelete(index)}>삭제</button>
         </li>
             
