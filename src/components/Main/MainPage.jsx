@@ -7,18 +7,21 @@ import ProfileSidebar from './ProfileSidebar';
 import PortfolioSection from './PortfolioSection';
 import ActivitySection from './ActivitySection';
 import './MainPage.css';
+import SideMenubar from './SideMenubar'; // 추가
 
 export default function MainPage() {
   return (
     <div className="main-container">
-        <div className="sidebar">
-            <ProfileSidebar />
-        </div>
+        <SideMenubar /> {/* 왼쪽 사이드바 */}
 
         <div className="main-content">
             <PortfolioSection className="portfolio-section"/>
 
             <ActivitySection className="activity-section"/>
+        </div>
+
+        <div className="sidebar">
+            <ProfileSidebar />
         </div>
 
       {/* <FeatureButtons /> */}

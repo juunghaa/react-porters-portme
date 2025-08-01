@@ -1,8 +1,8 @@
 .main-container {
     display: flex;
     flex-wrap: wrap; /* 반응형 위해 wrap 허용 */
-    gap: 4rem;
-    padding: 2rem; /* 전체 여백 */
+    gap: 1rem;
+    padding: 1rem; /* 전체 여백 */
   }
   
   /* 사이드바 스타일 */
@@ -12,7 +12,7 @@
     background-color: #f5f5f5;
   }
   
-  /* 오른쪽 컨텐츠 영역 */
+  /* 컨텐츠 영역 */
   .main-content {
     flex: 1;
     min-width: 300px;
