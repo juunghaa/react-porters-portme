@@ -1,0 +1,95 @@
+/* Header.css */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    padding: 16px 24px;
+
+
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 250px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.icon-button {
+    padding: 8px;
+    border: none;
+    background: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button:hover {
+    background-color: #f0f0f0;
+}
+
+.icon-button svg {
+    width: 20px;
+    height: 20px;
+    stroke: #666;
+}
+
+/* 검색창 애니메이션 */
+.search-container {
+    overflow: visible;
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+.search-container.hidden {
+    width: 0;
+    opacity: 0;
+}
+
+.search-container.visible {
+    width: 240px;
+    opacity: 1;
+}
+
+
+.search-input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 10;
+}

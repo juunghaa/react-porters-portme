@@ -1,0 +1,256 @@
+/* RightPanel.css */
+.right-panel {
+    right:0;
+    width: 320px;
+    background-color: white;
+    border-left: 1px solid #e5e7eb;
+    padding: 24px 20px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.main-content {
+    margin-right: 320px; /* RightPanel 너비만큼 여백? ㅁㄹ */
+}
+
+/* 프로필 부분 */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 3px solid #f3f4f6;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 4px 0;
+}
+
+.profile-role {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 20px 0;
+}
+
+/* 통계 컨테이너 */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.stat-icon {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.stat-count {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 2px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+}
+
+/* 섹션 공통 스타일 */
+.section {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.section-header h4,
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.more-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b7280;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.more-button:hover {
+    background-color: #f3f4f6;
+}
+
+/* 팁 카드 스타일 */
+.tips-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tip-card {
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tip-category {
+    font-size: 11px;
+    font-weight: 600;
+    color: #059669;
+    background-color: #d1fae5;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.tip-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+}
+
+.tip-description {
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* 포스트 리스트 스타일 */
+.section-title {
+    margin-bottom: 16px;
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post-item {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.post-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.post-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.post-title:hover {
+    color: #3b82f6;
+}
+
+.post-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.post-company {
+    font-size: 12px;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.post-tag {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .right-panel {
+        width: 280px;
+        padding: 20px 16px;
+    }
+
+    .stats-container {
+        gap: 12px;
+    }
+
+    .stat-count {
+        font-size: 16px;
+    }
+}
+
+/* 스크롤바 스타일 */
+.right-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.right-panel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.right-panel::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.right-panel::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
