@@ -41,7 +41,8 @@ export default function ActivityEditorPage() {
       
     return (
         <div className="activity-editor-page">
-        <h1>활동 에디터 페이지 화면 구성중~!!</h1>
+        <h1>활동 추가하기</h1>
+        <h5>포트폴리오에 들어갈 자신의 활동을 작성해보세요.</h5>
         <ActivityList activities={activities} details={details} 
         onDelete={handleDeleteActivity}
         onView={handleViewActivity}

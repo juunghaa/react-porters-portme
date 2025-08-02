@@ -71,6 +71,7 @@ function App() {
                         <p>바쁘다 바빠</p>
                         <p>왼쪽 사이드바를 만들었어용</p>
                     </div>
+                    <ActivityEditorPage />
                 </div>
 
                 {/* 오른쪽 패널 */}
