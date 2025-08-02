@@ -54,7 +54,7 @@ import Header from './components/Header/Header';
 import Sidebar from './components/Sidebar/Sidebar';
 import RightPanel from './components/RightPanel/RightPanel';
 
-
+//일부러 app.jsx 메인페이지 안에 활동에디터 페이지 넣어서 로컬로 확인하면서 개발중입니당
 function App() {
     return (
         <div className="App">

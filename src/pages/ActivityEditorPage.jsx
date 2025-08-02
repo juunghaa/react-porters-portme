@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ActivityEditor from '../components/Editor/ActivityEditor';
 import ActivityList from '../components/Editor/ActivityList';
 import './ActivityEditorPage.css'; // 스타일 파일 분리 시
+import DetailBox from '../components/Editor/DetailBox'; // 상세 정보 박스 컴포넌트
 
 export default function ActivityEditorPage() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,6 +44,8 @@ export default function ActivityEditorPage() {
         <div className="activity-editor-page">
         <h1>활동 추가하기</h1>
         <h5>포트폴리오에 들어갈 자신의 활동을 작성해보세요.</h5>
+        <DetailBox />
+
         <ActivityList activities={activities} details={details} 
         onDelete={handleDeleteActivity}
         onView={handleViewActivity}
@@ -75,3 +78,5 @@ export default function ActivityEditorPage() {
         </div>
     );
 }
+
+//일부러 app.jsx 메인페이지 안에 활동에디터 페이지 넣어서 로컬로 확인하면서 개발중입니당

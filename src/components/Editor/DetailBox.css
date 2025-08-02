@@ -1,0 +1,149 @@
+/* 전체 박스 스타일 */
+.detail-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* 타이틀 */
+  .detail-box h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: #333;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .image-preview-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  
+  .image-box {
+    width: 64px;
+    height: 64px;
+    background-color: white; /* 하얀 배경 */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-box.add-box {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: #999;
+  }
+  .file-section {
+    margin-bottom: 1rem;
+  }
+  
+  .file-upload-box {
+    display: inline-block;
+    width: 91%;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: left;
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .file-list {
+    margin-top: 8px;
+  }
+  
+  .file-name {
+    font-size: 14px;
+    color: #444;
+    margin: 2px 0;
+  }
+  .file-link {
+    color: #007BFF;            /* Bootstrap-style 파란색 */
+    text-decoration: underline;
+    cursor: default;
+    font-size: 14px;
+  }
+  
+  /* 태그 입력창 묶음 */
+  .tag-input {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  
+  /* 태그 입력창 */
+  .tag-input input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 13px;
+  }
+  
+  /* 태그 추가 버튼 */
+  .tag-input button {
+    background-color: #7ed957;
+    padding: 8px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .tag-input button:hover {
+    background-color: #5cad38;
+  }
+  .tag-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 0;
+  }
+  
+  .tag-suggestions li {
+    background-color: #f2e4d9;
+    color: #5a3e36;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.2s ease;
+    border: 1px solid #e0d3c6;
+  }
+  
+  .tag-suggestions li:hover {
+    background-color: #e9d5c3;
+  }
+  
+  
+  .selected-tag .tag {
+    background-color: #ebcaae;
+    padding: 4px 8px;
+    border-radius: 10px;
+    margin-left: 1px;
+  }
+  
+  
